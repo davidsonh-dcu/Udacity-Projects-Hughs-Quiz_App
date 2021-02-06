@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/q1_label"
+            style="@style/QuestionLabel"
+            android:text="@string/q1"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="37dp" />
+
+        <TextView
+            android:id="@+id/q1_textview"
+            style="@style/QuestionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/q1_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/q1_label" />
+
+        <RadioGroup
+            android:id="@+id/q1_radio_buttons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/q1_textview">
+
+            <RadioButton
+                android:id="@+id/q1_radioButton_false"
+                android:layout_width="68dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/q1_radio_button_false"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/q1_textview"/>
+
+            <RadioButton
+                android:id="@+id/q1_radioButton_true"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/q1_radio_button_true"
+                app:layout_constraintStart_toEndOf="@+id/q1_redcross_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/q1_text"/>
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/q1_redgreencheck_imageview"
+            style="@style/RedGreenCheckbox"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/red_green_tick"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="@+id/q1_radio_buttons" />
+
+        <TextView
+            android:id="@+id/q2_label"
+            style="@style/QuestionLabel"
+            android:text="@string/q2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="100dp" />
+
+        <TextView
+            android:id="@+id/q2_textview"
+            style="@style/QuestionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/q2_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+        <EditText
+            android:id="@+id/q2_editText"
+            android:layout_width="281dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="@string/user_hint"
+            android:importantForAutofill="no"
+            android:inputType="number|text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/q2_textview" />
+
+        <ImageView
+            android:id="@+id/q2_redgreencheck_imageview"
+            style="@style/RedGreenCheckbox"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/green_tick"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toTopOf="@+id/q2_editText" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="176dp" />
+
+        <TextView
+            android:id="@+id/q3_label"
+            style="@style/QuestionLabel"
+            android:text="@string/q3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+        <TextView
+            android:id="@+id/q3_textview"
+            style="@style/QuestionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/q3_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+        <CheckBox
+            android:id="@+id/q3_i_checkbox"
+            style="@style/CheckBox"
+            android:checked="false"
+            android:text="@string/q3_i"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/q3_textview" />
+
+        <ImageView
+            android:id="@+id/q3_i_greencheck_imageview"
+            style="@style/RedGreenCheckbox"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/green_tick"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/q3_i_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/q3_textview" />
+
+        <CheckBox
+            android:id="@+id/q3_ii_checkbox"
+            style="@style/CheckBox"
+            android:checked="false"
+            android:text="@string/q3_ii"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/q3_i_checkbox" />
+
+        <ImageView
+            android:id="@+id/q3_ii_greencheck_imageview"
+            style="@style/RedGreenCheckbox"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/green_tick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/q3_ii_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/q3_i_greencheck_imageview" />
+
+        <CheckBox
+            android:id="@+id/q3_iii_checkbox"
+            style="@style/CheckBox"
+            android:checked="false"
+            android:text="@string/q3_iii"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/q3_ii_checkbox" />
+
+        <ImageView
+            android:id="@+id/q3_iii_redcheck_imageview"
+            style="@style/RedGreenCheckbox"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/red_green_tick"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/q3_iii_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/q3_ii_greencheck_imageview" />
+
+        <CheckBox
+            android:id="@+id/q3_iv_checkbox"
+            style="@style/CheckBox"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:checked="false"
+            android:text="@string/q3_iv"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/q3_textview"/>
+
+        <ImageView
+            android:id="@+id/q3_iv_greencheck_imageview"
+            style="@style/RedGreenCheckbox"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/green_tick"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/q3_iv_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/q3_textview" />
+
+        <CheckBox
+            android:id="@+id/q3_v_checkbox"
+            style="@style/CheckBox"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginRight="70dp"
+            android:checked="false"
+            android:text="@string/q3_v"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/q3_ii_greencheck_imageview"
+            app:layout_constraintTop_toBottomOf="@+id/q3_iv_checkbox" />
+
+        <ImageView
+            android:id="@+id/q3_v_greencheck_imageview"
+            style="@style/RedGreenCheckbox"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/green_tick"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/q3_v_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/q3_iv_greencheck_imageview" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="180dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="326dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="316dp" />
+
+        <TextView
+            android:id="@+id/q4_label"
+            style="@style/QuestionLabel"
+            android:text="@string/q4"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+        <ImageView
+            android:id="@+id/q4_imageView"
+            android:layout_width="0dp"
+            android:layout_height="189dp"
+            android:contentDescription="@string/red_cross"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/guideline6"
+            app:srcCompat="@mipmap/motion_time_graph" />
+
+        <TextView
+            android:id="@+id/q4_textview"
+            style="@style/QuestionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/q4_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/q4_imageView" />
+
+        <TextView
+            android:id="@+id/q4_i_textview"
+            style="@style/QuestionText"
+            android:layout_width="287dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/q4_i"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/q4_textview" />
+
+        <EditText
+            android:id="@+id/q4_i_editBox"
+            style="@style/Q4EditTextBox"
+            android:autofillHints=""
+            android:inputType="text|textCapCharacters"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toBottomOf="@+id/q4_textview"
+            app:layout_constraintTop_toTopOf="@+id/q4_i_textview" />
+
+        <ImageView
+            android:id="@+id/q4_i_redgreencheck_imageview"
+            style="@style/RedGreenCheckbox"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/green_tick"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toTopOf="@+id/q4_i_textview" />
+
+        <TextView
+            android:id="@+id/q4_ii_textview"
+            style="@style/QuestionText"
+            android:layout_width="291dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/q4_ii"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintHorizontal_bias="0.612"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/q4_i_textview" />
+
+        <EditText
+            android:id="@+id/q4_ii_editBox"
+            style="@style/Q4EditTextBox"
+            android:autofillHints=""
+            android:inputType="text|textCapCharacters"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="@+id/q4_ii_textview" />
+
+        <ImageView
+            android:id="@+id/q4_ii_redgreencheck_imageview"
+            style="@style/RedGreenCheckbox"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/green_tick"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toTopOf="@+id/q4_ii_textview"/>
+
+        <TextView
+            android:id="@+id/q4_iii_textview"
+            style="@style/QuestionText"
+            android:layout_width="287dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/q4_iii"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintHorizontal_bias="0.612"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/q4_ii_textview" />
+
+        <EditText
+            android:id="@+id/q4_iii_editBox"
+            style="@style/Q4EditTextBox"
+            android:autofillHints=""
+            android:inputType="text|textCapCharacters"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="@+id/q4_iii_textview" />
+
+        <ImageView
+            android:id="@+id/q4_iii_redgreencheck_imageview"
+            style="@style/RedGreenCheckbox"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/green_tick"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toTopOf="@+id/q4_iii_textview" />
+
+        <TextView
+            android:id="@+id/q4_iv_textview"
+            style="@style/QuestionText"
+            android:layout_width="287dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/q4_iv"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintHorizontal_bias="0.612"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/q4_iii_textview" />
+
+        <EditText
+            android:id="@+id/q4_iv_editBox"
+            style="@style/Q4EditTextBox"
+            android:autofillHints=""
+            android:inputType="text|textCapCharacters"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="@+id/q4_iv_textview" />
+
+        <ImageView
+            android:id="@+id/q4_iv_redgreencheck_imageview"
+            style="@style/RedGreenCheckbox"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/green_tick"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toTopOf="@+id/q4_iv_textview" />
+
+        <Button
+            android:id="@+id/reset"
+            style="@style/SubmitResetButton"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/guideline7"
+            app:layout_constraintVertical_bias="0.0"
+            android:onClick="resetAnswers"/>
+
+        <Button
+            android:id="@+id/submit"
+            style="@style/SubmitResetButton"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/submit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
+            app:layout_constraintTop_toBottomOf="@+id/guideline7"
+            app:layout_constraintVertical_bias="0.0"
+            android:onClick="showScore"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="734dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
