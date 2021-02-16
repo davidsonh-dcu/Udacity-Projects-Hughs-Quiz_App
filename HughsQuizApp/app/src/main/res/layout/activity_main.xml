@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:background="@color/white">
 
         <TextView
             android:id="@+id/q1_label"
@@ -157,7 +158,11 @@
 
         <CheckBox
             android:id="@+id/q3_i_checkbox"
-            style="@style/CheckBox"
+            android:layout_width="105dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="8dp"
+            android:textSize="16sp"
             android:checked="false"
             android:text="@string/q3_i"
             app:layout_constraintStart_toStartOf="@+id/guideline"
@@ -175,7 +180,11 @@
 
         <CheckBox
             android:id="@+id/q3_ii_checkbox"
-            style="@style/CheckBox"
+            android:layout_width="105dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="8dp"
+            android:textSize="16sp"
             android:checked="false"
             android:text="@string/q3_ii"
             app:layout_constraintEnd_toEndOf="parent"
@@ -196,7 +205,11 @@
 
         <CheckBox
             android:id="@+id/q3_iii_checkbox"
-            style="@style/CheckBox"
+            android:layout_width="105dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="8dp"
+            android:textSize="16sp"
             android:checked="false"
             android:text="@string/q3_iii"
             app:layout_constraintEnd_toEndOf="parent"
@@ -216,7 +229,11 @@
 
         <CheckBox
             android:id="@+id/q3_iv_checkbox"
-            style="@style/CheckBox"
+            android:layout_width="105dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="8dp"
+            android:textSize="16sp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:checked="false"
@@ -236,7 +253,11 @@
 
         <CheckBox
             android:id="@+id/q3_v_checkbox"
-            style="@style/CheckBox"
+            android:layout_width="105dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="8dp"
+            android:textSize="16sp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginEnd="70dp"
@@ -430,7 +451,7 @@
             app:layout_constraintTop_toTopOf="@+id/q4_iv_textview" />
 
         <Button
-            android:id="@+id/reset"
+            android:id="@+id/resetQuestions"
             style="@style/SubmitResetButton"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
@@ -442,7 +463,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/guideline7"
             app:layout_constraintVertical_bias="0.0"
-            android:onClick="resetAnswers"/>
+            android:onClick="resetQuestions"/>
 
         <Button
             android:id="@+id/submit"

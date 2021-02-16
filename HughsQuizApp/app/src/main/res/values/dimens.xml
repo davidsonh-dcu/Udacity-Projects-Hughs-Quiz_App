@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    <dimen name=""></dimen>-->
+<resources>
+    <!-- QuestionLabel -->
+    <dimen name="question_text_size">16sp</dimen>
+    <dimen name="question_layout_width">22dp</dimen>
+    <dimen name="question_layout_height">28dp</dimen>
+    <dimen name="question_layout_marginStart">8dp</dimen>
+    <dimen name="question_layout_marginLeft">8dp</dimen>
+    <dimen name="question_layout_marginTop">10dp</dimen>
+
+    <!-- checkbox-->
+    <dimen name="checkbox_layout_width">105dp</dimen>
+    <dimen name="checkbox_layout_height">105dp</dimen>
+    <dimen name="checkbox_layout_marginTop">4dp</dimen>
+    <dimen name="checkbox_layout_paddingLeft">8dp</dimen>
+
+    <!-- RedGreenCheckbox-->
+    <dimen name="redgreencheckbox_layout_width">24dp</dimen>
+    <dimen name="redgreencheckbox_layout_height">24dp</dimen>
+    <dimen name="redgreencheckbox_layout_marginTop">8dp</dimen>
+
+    <!-- Q4EditTextBox-->
+    <dimen name="Q4EditTextBox_layout_width">41dp</dimen>
+    <dimen name="Q4EditTextBox_layout_height">41dp</dimen>
+
+</resources>

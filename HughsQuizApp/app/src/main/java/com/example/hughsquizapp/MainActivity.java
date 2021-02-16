@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -18,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup q1radioGroup;
     ImageView q1ImageView;
     RadioButton q1FalseRadioButton, q1TrueRadioButton;
-    ImageView q1_redgreenCheckBox;
 
     TextView q2TextView;
     ImageView q2ImageView;
@@ -31,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     boolean hasCheckBoxQ3iii = false;
     boolean hasCheckBoxQ3iv = false;
     boolean hasCheckBoxQ3v = false;
-    boolean hasRadioButtonQ1True = false;
 
     EditText q4iAnswerEditText, q4iiAnswerEditText, q4iiiAnswerEditText, q4ivAnswerEditText;
     ImageView q4iImageView, q4iiImageView, q4iiiImageView, q4ivImageView;
@@ -72,19 +69,20 @@ public class MainActivity extends AppCompatActivity {
         q4iiiImageView = (ImageView) findViewById(R.id.q4_iii_redgreencheck_imageview);
         q4ivImageView = (ImageView) findViewById(R.id.q4_iv_redgreencheck_imageview);
     }
+
     //Show users total score
     public void showScore(View view) {
        //Check score for question 1
         //Ref //https://www.tutlane.com/tutorial/android/android-radiogroup-with-examples
 
-        RadioGroup q1 = (RadioGroup) findViewById(R.id.q1_radio_buttons);
-        switch (q1.getCheckedRadioButtonId()) {
+        RadioGroup q1RadioGroup = (RadioGroup) findViewById(R.id.q1_radio_buttons);
+        switch (q1RadioGroup.getCheckedRadioButtonId()) {
             case R.id.q1_radioButton_false:
-                userScore = userScore + 0;
+                userScore += 0;
                 q1ImageView.setImageResource(R.mipmap.red_cross);
                 break;
             case R.id.q1_radioButton_true:
-                userScore = userScore + 1;
+                userScore += 1;
                 q1ImageView.setImageResource(R.mipmap.green_tick);
                 break;
         }
@@ -92,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         //Check score for question 2
         String q2Answer = "1000000";
         if (q2TextView.getText().toString().equals(q2Answer)) {
-            userScore = userScore + 1;
+            userScore += 1;
             q2ImageView.setImageResource(R.mipmap.green_tick);
         } else q2ImageView.setImageResource(R.mipmap.red_cross);
 
@@ -109,41 +107,41 @@ public class MainActivity extends AppCompatActivity {
         hasCheckBoxQ3v = q3vCheckBox.isChecked();
 
         if (hasCheckBoxQ3i) {
-            userScore += +1;
+            userScore += 1;
             q3iImageView.setImageResource(R.mipmap.green_tick);
         }
         else q3iImageView.setImageResource(R.mipmap.red_cross);
         if (hasCheckBoxQ3ii) {
-            userScore += +1;
+            userScore += 1;
             q3iiImageView.setImageResource(R.mipmap.green_tick);
         }
         else q3iiImageView.setImageResource(R.mipmap.red_cross);
 
         //Q3iiithis is the only wrong answer
         if (hasCheckBoxQ3iii) {
-            userScore += +0;
+            userScore += 0;
             q3iiiImageView.setImageResource(R.mipmap.red_cross);
         }
         else q3iiiImageView.setImageResource(R.mipmap.red_cross);
 
         if (hasCheckBoxQ3iv) {
-            userScore += +1;
+            userScore += 1;
             q3ivImageView.setImageResource(R.mipmap.green_tick);
         }
         else q3ivImageView.setImageResource(R.mipmap.red_cross);
 
         if (hasCheckBoxQ3v) {
-            userScore += +1;
+            userScore += 1;
             q3vImageView.setImageResource(R.mipmap.green_tick);
         }
         else q3vImageView.setImageResource(R.mipmap.red_cross);
 
         //Check score for Q4
         //Reference: string comparison https://stackoverflow.com/questions/16143562/string-comparison-android/16143606#:~:text=The%20%3D%3D%20operator%20checks%20to,to%20compare%20strings%20for%20equality.
-        String Q4_i = "E";
-        String Q4_ii = "A";
-        String Q4_iii = "C";
-        String Q4_iv = "B";
+        final String Q4_i = "E";
+        final String Q4_ii = "A";
+        final String Q4_iii = "C";
+        final String Q4_iv = "B";
 
         if (q4iAnswerEditText.getText().toString().equals(Q4_i)) {
             userScore += +1;
@@ -172,10 +170,13 @@ public class MainActivity extends AppCompatActivity {
 
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+
+        //reset User Score
+        userScore = 0;
     }
 
     // reset answers clear all redgreen check boxes and user input views
-    public void resetAnswers(View view) {
+    public void resetQuestions(View view) {
         userScore = 0;
 
         //reset Q1

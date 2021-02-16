@@ -3,38 +3,38 @@
 <!-- style for question numbers -->
 <resources>
     <style name="QuestionLabel">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/question_text_size</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textColor">@android:color/black</item>
-        <item name="android:layout_width">22dp</item>
-        <item name="android:layout_height">28dp</item>
-        <item name="android:layout_marginStart">8dp</item>
-        <item name="android:layout_marginLeft">8dp</item>
-        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">@dimen/question_layout_width</item>
+        <item name="android:layout_height">@dimen/question_layout_height</item>
+        <item name="android:layout_marginStart">@dimen/question_layout_marginStart</item>
+        <item name="android:layout_marginLeft">@dimen/question_layout_marginLeft</item>
+        <item name="android:layout_marginTop">@dimen/question_layout_marginTop</item>
     </style>
 
     <style name="QuestionText">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/question_text_size</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textColor">@android:color/holo_blue_dark</item>
         <item name="android:layout_width">match_parent</item>
     </style>
 
     <style name="CheckBox">
-        <item name="android:layout_width">105dp</item>
-        <item name="android:layout_height">28dp</item>
-        <item name="android:layout_marginTop">4dp</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">@dimen/checkbox_layout_width</item>
+        <item name="android:layout_height">@dimen/checkbox_layout_height</item>
+        <item name="android:layout_marginTop">@dimen/checkbox_layout_marginTop</item>
+        <item name="android:paddingLeft">@dimen/checkbox_layout_paddingLeft</item>
+        <item name="android:textSize">@dimen/question_text_size</item>
         <item name="android:checked">true</item>
     </style>
 
     <style name="RedGreenCheckbox">
-        <item name="android:layout_width">24dp</item>
-        <item name="android:layout_height">24dp</item>
-        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_width">@dimen/redgreencheckbox_layout_width</item>
+        <item name="android:layout_height">@dimen/redgreencheckbox_layout_height</item>
+        <item name="android:layout_marginTop">@dimen/redgreencheckbox_layout_marginTop</item>
         <item name="android:visibility">visible</item>
-        <item name="backgroundColor">@color/white</item>
+        <item name="android:background">@color/white</item>
     </style>
 
 <!--Text box border -->
@@ -44,8 +44,8 @@
 
     <!--Edit textbox style -->
     <style name="Q4EditTextBox">
-        <item name="android:layout_width">41dp</item>
-        <item name="android:layout_height">41dp</item>
+        <item name="android:layout_width">@dimen/Q4EditTextBox_layout_width</item>
+        <item name="android:layout_height">@dimen/Q4EditTextBox_layout_height</item>
         <item name="android:ems">10</item>
         <item name="android:inputType">textPersonName|textCapSentences</item>
     </style>
