@@ -451,7 +451,7 @@
             app:layout_constraintTop_toTopOf="@+id/q4_iv_textview" />
 
         <Button
-            android:id="@+id/resetQuestions"
+            android:id="@+id/reset_questions_button"
             style="@style/SubmitResetButton"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
@@ -466,7 +466,7 @@
             android:onClick="resetQuestions"/>
 
         <Button
-            android:id="@+id/submit"
+            android:id="@+id/submit_answers_button"
             style="@style/SubmitResetButton"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
